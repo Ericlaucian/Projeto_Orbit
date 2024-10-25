@@ -14,6 +14,11 @@
             justify-content: center;
             align-items: center;
         }
+        p{
+            padding: 7%;
+            font-size: 75%;
+            color: rgba(255, 255, 255, 0.829);
+        }
     </style>
 </head>
 
@@ -21,20 +26,47 @@
     <div class="out-cadastro">
         <div class="cadastro-info-foto">
             <div class="cadastro-info">
+                <div class="area-foto">
+                    <img id="foto-cadastro" src="" alt="">
+                    <label for="button-uptade-imagem" class="label-uptade-imagem">Escolher foto</label>
+                    <input id="button-uptade-imagem" type="file" accept="image/*" onchange="mostrar_imagem_castro()"></input>
+                </div>
                 <div class="info-input-label">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" placeholder="Nome Completo">
                 </div>
+                <br>
                 <div class="info-input-label">
-                    <label for="Data-de-Nascimento">Data de Nascimento</label>
+                    <label for="Data-de-Nascimento" >Data de Nascimento</label>
                     <input type="date" id="Data-de-Nascimento">
                 </div>
+                <br>
+                <div class="info-input-label">
+                    <label for="email" >email</label>
+                    <input type="email" id="email" placeholder="exemplo@gmail.com">
+                </div>
+                <br>
+                <div class="info-input-label">
+                    <label for="CPF" >CPF</label>
+                    <input type="text" id="CPF" placeholder="apenas números" maxlength="11" >
+                </div>
+                <br><br>
+                <label for="mudar-pagina" class="mudar-pagina">Póximo</label>
+                <button id="mudar-pagina" onclick="mudaPagina_Cadastro1_2()"></button>
+                
+                <div class="bottom-cadastro">
+                    <p>Atenção ao preencher os dados, pois eles estarão diponíveis para os que analizarão seu perfil</p>
+                </div>
             </div>
-            
         </div>
-        <div class="info-foto-area">
-                <img id="foto-cadastro" src="" alt="">
+        <div class="info-empresa-cadastro">
+                <img src="OIP.jpg" alt="logo" class="logo-cadastro">
+                <br><br>
+                <h5>Sobre nós</h5>
+                <p>A Orbit surgiu como uma iniciativa do SENAI Nova Friburdo... Bota um bagulho decente aqui dps</p>
         </div>
     </div>
 </body>
 </html>
+
+<script src="script.js"></script>
