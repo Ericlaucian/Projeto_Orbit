@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body, html{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            padding: 7%;
+            font-size: 75%;
+            color: rgba(0, 0, 0, 0.829);
+            text-align: justify;
+        }
+        h2{
+            font-family: "Questrial";
+        }
+    </style>
+</head>
+
+<body class="body-cadastro">
+    <div class="out-cadastro">
+        <div class="cadastro-info-foto">
+            <div class="cadastro-info">
+                <h2 class="h">Endereço</h2>
+                <br>
+                <div class="info-input-label">
+                    <label for="Cidade" >Cidade</label>
+                    <input type="text" id="Cidade" placeholder="Cidade" maxlength="11" >
+                </div>
+                <br>
+                <div class="info-input-label">
+                    <label for="Bairro" >Bairro</label>
+                    <input type="text" id="Bairro" placeholder="Bairro" maxlength="11" >
+                </div>
+                <br>
+                <div class="info-input-label">
+                    <label for="CEP" >CEP</label>
+                    <input type="text" id="CEP" placeholder="0000-000" maxlength="11" >
+                </div>
+                <br>
+                <div class="info-input-label">
+                    <label for="Rua" >Rua</label>
+                    <input type="text" id="Rua" placeholder="Rua" maxlength="11" >
+                </div>
+                <br><br>
+                <label for="mudar-pagina" class="mudar-pagina">Póximo</label>
+                <button id="mudar-pagina" onclick="mudaPagina_Cadastro2_3()"></button>
+                <br><br>
+                <div class="bottom-cadastro">
+                    Atenção ao preencher os dados, pois eles estarão diponíveis para os que analizarão seu perfil
+                </div>
+            </div>
+        </div>
+        <div class="info-empresa-cadastro">
+            <img src="../svgs/Logo.svg" alt="logo" class="logo-cadastro">
+            <br><br>
+            <h5>Sobre nós</h5>
+            <p>A Orbit é uma empresa inovadora com o propósito de conectar o mundo industrial a alunos recém-formados de cursos técnicos. Nosso objetivo é criar uma ponte entre o conhecimento acadêmico e as demandas do mercado de trabalho, facilitando o ingresso de jovens talentos no setor industrial. Através de programas de estágio, treinamentos especializados e parcerias estratégicas, buscamos preparar a próxima geração de profissionais para os desafios do futuro, impulsionando o crescimento das empresas e o desenvolvimento de carreiras promissoras. Na Orbit, acreditamos que a união entre educação e indústria é a chave para um futuro mais inovador e sustentável.</p>
+    </div>
+    </div>
+</body>
+</html>
+
+<script src="../script.js"></script>

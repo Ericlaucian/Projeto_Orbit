@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body, html{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            padding: 7%;
+            font-size: 75%;
+            color: rgba(0, 0, 0, 0.829);
+            text-align: justify;
+            font-family: "Questrial";
+        }
+        h3{
+            font-family: "Questrial"
+        }
+        textarea{
+            padding-left: 5%;
+            padding-right: 5%;
+            border: 1px solid #67127C;
+            border-radius: 30px;
+            width: 80%;
+            height: 200px;
+            left: 0;
+            background-color: rgba(255, 0, 0, 0);
+            color: rgba(7, 3, 3, 0.801);
+        }
+    </style>
+</head>
+
+<body class="body-cadastro">
+    <div class="out-cadastro">
+        <div class="cadastro-info-foto">
+            <div class="cadastro-info">
+                <h2>Detalhento</h2>
+                <div class="info-input-label-descricao">
+                    <h3 class="label-detalhamento" >Cursos</h3>
+                    <textarea name="Cursos" id="Cursos" placeholder="separe os cursos por ','"></textarea>
+                </div>
+                <br><br>
+                <div class="info-input-label-descricao">
+                    <h3 class="label-detalhamento" >Experiência Profissional</h3>
+                    <textarea name="exp-profissional" id="Experiência-Profissional" placeholder="projetos, empregos anteriores..."></textarea>
+                </div>
+                <div class="bottom-cadastro">
+                    Atenção ao preencher os dados, pois eles estarão diponíveis para os que analizarão seu perfil
+                </div>
+            </div>
+        </div>
+        <div class="info-empresa-cadastro">
+            <img src="../svgs/Logo.svg" alt="logo" class="logo-cadastro">
+            <br><br>
+            <h5>Sobre nós</h5>
+            <p>A Orbit é uma empresa inovadora com o propósito de conectar o mundo industrial a alunos recém-formados de cursos técnicos. Nosso objetivo é criar uma ponte entre o conhecimento acadêmico e as demandas do mercado de trabalho, facilitando o ingresso de jovens talentos no setor industrial. Através de programas de estágio, treinamentos especializados e parcerias estratégicas, buscamos preparar a próxima geração de profissionais para os desafios do futuro, impulsionando o crescimento das empresas e o desenvolvimento de carreiras promissoras. Na Orbit, acreditamos que a união entre educação e indústria é a chave para um futuro mais inovador e sustentável.</p>
+    </div>
+    </div>
+</body>
+</html>
+
+<script src="../script.js"></script>
