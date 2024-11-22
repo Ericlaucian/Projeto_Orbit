@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de PDF com Nome do Arquivo</title>
+    <style>
+        /* Estilos para o formulário */
+        .container {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo do label */
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo do input */
+        input[type="file"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            cursor: pointer;
+        }
+
+        input[type="file"]:hover {
+            border-color: #3498db;
+        }
+
+        /* Estilo para exibir o nome do arquivo */
+        .file-name {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Estilo para mensagens de erro */
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <label for="upload">Escolha um arquivo PDF para upload:</label>
+        <input type="file" id="upload" name="upload" accept=".pdf">
+
+        <div id="file-name" class="file-name"></div>
+        <div id="message" class="error"></div>
+    </div>
+
+    <script>
+        // Captura o input de arquivo e os elementos de nome de arquivo e mensagem de erro
+        const fileInput = document.getElementById('upload');
+        const fileNameDiv = document.getElementById('file-name');
+        const messageDiv = document.getElementById('message');
+
+        // Adiciona o evento para capturar quando o arquivo é selecionado
+        fileInput.addEventListener('change', function() {
+            // Limpa as mensagens anteriores
+            fileNameDiv.textContent = '';
+            messageDiv.textContent = '';
+
+            const file = fileInput.files[0];
+            if (file) {
+                // Verifica se o arquivo é um PDF
+                if (file.type === 'application/pdf') {
+                    // Exibe o nome do arquivo selecionado
+                    fileNameDiv.textContent = 'Arquivo selecionado: ' + document.getElementById('upload').files[0].name;
+                } else {
+                    // Se o arquivo não for PDF, exibe uma mensagem de erro
+                    messageDiv.textContent = 'Por favor, selecione um arquivo PDF.';
+                    fileInput.value = ''; // Limpa o campo de entrada
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
