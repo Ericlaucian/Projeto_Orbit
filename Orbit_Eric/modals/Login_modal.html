@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+   <button onclick="login_modal()">login</button>
+
+   <!-- modal do login -->
+   <div class="modal-login-out" id="login">
+      <div class="modal-login-box">
+         <h2 class="h">Entrar</h2>
+         <br>
+         <div class="info-input-label">
+            <label for="email-login" >email</label>
+            <input type="text" id="email-login" placeholder="exemplo@gmail.com">
+         </div>
+         <br><br>
+         <div class="info-input-label">
+            <label for="senha-login">Senha</label>
+            <input type="text" id="senha-login" placeholder="********">
+        </div>
+        <br><br>
+        <div class="login-buttons-area">
+           <label for="modal-login-cancel-button" class="modal-login-cancel-button"><p class="cancel-button-text">Cancelar</p></label>
+           <button id="modal-login-cancel-button" onclick="out_modal()"></button>
+           <label for="modal-login-button" class="modal-login-button"><p class="p">Entrar</p></label>
+           <button id="modal-login-button" onclick="verificarLogin()"></button>
+        </div>
+      </div>
+   </div>
+
+</body>
+</html>
+<script src="../script.js"></script>
