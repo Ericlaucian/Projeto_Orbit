@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      button {
+        display: block;
+        width: 30%;
+        padding: 10px;
+        margin-top: 20px;
+        background: #67117c;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-left: 70%;
+      }
+      button:hover {
+          background: #71418b;
+      }
+      div.profile-info input,
+      textarea {
+        padding-left: 1%;
+        padding-right: 5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border: 1px solid#67127C;
+        border-radius: 30px;
+        width: 80%;
+        height: 40px;
+        left: 0;
+        background-color: rgba(255, 0, 0, 0);
+        color: rgba(0, 0, 0, 0.801);
+      }
+      textarea {
+          min-width: 95%;
+          max-width: 95%;
+          height: 150px; 
+          resize: none;
+      }
+    </style>
+  </head>
+  <body class="body-perfil">
+    <div class="container" id="view-profile">
+      <div class="profile-photo-container">
+        <img
+          src="imgs/foto_perfil_vazio.jpg"
+          alt="Foto de Perfil"
+          id="view-photo"
+          class="profile-photo"
+        />
+      </div>
+      <div class="profile-info">
+        <h1>Seu Perfil</h1>
+        <div class="info">
+          <label>Nome Completo:</label>
+          <p id="view-nome-completo">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Data de Nascimento:</label>
+          <p id="view-data-nascimento">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Estado:</label>
+          <p id="view-estado">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Cidade:</label>
+          <p id="view-cidade">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Escolaridade:</label>
+          <p id="view-escolaridade">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Endereço:</label>
+          <p id="view-endereco">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Curso:</label>
+          <p id="view-curso">Carregando...</p>
+        </div>
+        <div class="info">
+          <label>Descrição:</label>
+          <p id="view-descricao">Carregando...</p>
+        </div>
+        <button onclick="toggleEditMode()">Editar Perfil</button>
+      </div>
+    </div>
+
+    <div class="container" id="edit-profile" style="display: none">
+      <div class="profile-photo-container">
+        <img
+          src=""
+          alt="Foto de Perfil"
+          id="edit-photo-preview"
+          class="profile-photo"
+        />
+      </div>
+      <div class="profile-info">
+        <h1>Editar Perfil</h1>
+        <form id="editProfileForm">
+          <label for="edit-photo" class="label-trocar-imagem">Trocar foto de perfil</label>
+          <input
+            class="form-control mb-3"
+            type="file"
+            id="edit-photo"
+            accept="image/*"
+            onchange="previewPhoto()"
+            placeholder="trocar foto de perfil"
+          />
+          <div class="info">
+            <label for="nome-completo">Nome Completo:</label>
+            <input type="text" id="edit-nome-completo" name="nome-completo" />
+          </div>
+          <div class="info">
+            <label for="data-nascimento"
+              >Data de Nascimento (DD/MM/AAAA):</label
+            >
+            <input
+              type="text"
+              id="edit-data-nascimento"
+              name="data-nascimento"
+              maxlength="10"
+              placeholder="DD/MM/AAAA"
+              oninput="formatDate(this)"
+            />
+          </div>
+          <div class="info">
+            <label for="estado">Estado:</label>
+            <input type="text" id="edit-estado" name="estado"  />
+          </div>
+          <div class="info">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="edit-cidade" name="cidade" />
+          </div>
+          <div class="info">
+            <label for="escolaridade">Escolaridade:</label>
+            <input type="text" id="edit-escolaridade" name="escolaridade" />
+          </div>
+          <div class="info">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="edit-endereco" name="endereco" />
+          </div>
+          <div class="info">
+            <label for="curso">Curso:</label>
+            <input type="text" id="edit-curso" name="curso" />
+          </div>
+          <div class="info">
+            <label for="descricao">Descrição:</label>
+            <textarea id="edit-descricao" name="descricao"></textarea>
+          </div>
+          <button type="button" onclick="saveProfile()">Salvar</button>
+          <button type="button" onclick="toggleEditMode()">Voltar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,711 @@
+@font-face {
+    font-family: "Questrial";
+    src: url(fontes/Questrial-Regular.ttf) format("opentype"), url(fontes/Questrial-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+#foto-cadastro{
+    height: 70%;
+    width: auto;
+    aspect-ratio: 1;
+    background-color: rgb(75, 60, 99);
+    border-radius: 50%;
+}
+#perfil-button{
+    display: none;
+}
+#mudar-pagina{
+    display: none;
+}
+#login{
+    display: none;
+}
+#cadastro{
+    display: none;
+}
+#button-uptade-imagem{
+    display: none;
+}
+#modal-login-button{
+    display: none;
+}
+#modal-login-cancel-button{
+    display: none;
+}
+#voltar-cadastro{
+    display: none;
+}
+#concluirCadastro{
+    display: none;
+}
+#curriculo{
+    display: none;
+}
+.label-uptade-imagem{
+    border: 1px solid #67127C;
+    width: 30%;
+    height: 5%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    font-family: "Questrial";
+}
+.label-uptade-imagem:hover{
+    background-color: #67127C;
+    color: white;
+}
+.label-uptade-curriculo{
+    border: 1px solid #67127C;
+    width: 40%;
+    height: 10%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    font-family: "Questrial";
+}
+.label-uptade-curriculo:hover{
+    background-color: #67127C;
+    color: white;
+}
+.curriculo-nome{
+    font-family: "Questrial";
+}
+.body-cadastro{
+    background: white;
+    background-image: url(svgs/Vector\ 2.svg);
+    background-position: 30% -10%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+.out-cadastro{
+    width: 50%;
+    height: 80%;
+    /*background: radial-gradient(circle at 100% 70%, #3c139c, #05038b);*/
+    background-color: rgb(255, 255, 255);
+    box-shadow: -2px 0px 30px rgba(0, 0, 0, 0.226);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    align-self: center;
+}
+.cadastro-info-foto{
+    padding: 1%;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.cadastro-info{
+    height: 100%;
+    width: 90%;
+    position: relative;
+}
+.info-input-label{
+    width: 90%;
+    height: 8%;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+.info-input-label label{
+    font-family:"Questrial";
+    left: 0;
+    font-size: 6;
+}
+.info-input-label input{
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid#67127C;
+    border-radius: 30px;
+    width: 80%;
+    height: 40px;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.801);
+}
+.info-input-label input:focus{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.301);
+}
+.info-input-label input::placeholder{
+    color: rgba(0, 0, 0, 0.274);
+}
+.info-empresa-cadastro{
+    height: 100%;
+    width: 70%;
+    right: 0;
+    background-color: none;
+    box-shadow: -5px 0px 30px rgba(0, 0, 0, 0.055);
+    border-radius: 20px;
+}
+.bottom-cadastro{
+    position: absolute;
+    bottom: 2%;
+    font-size: 3;
+    font-family: "Questrial";
+    color: rgba(0, 0, 0, 0.699);
+}
+.mudar-pagina{
+    border: 1px solid #67127C;
+    width: 40%;
+    height: 5%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    padding: 3%;
+    font-family: "Questrial";
+}
+.mudar-pagina:hover{
+    background-color: #67127C;
+    color: white;
+}
+.area-foto{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10%;
+    height: 30%;
+    width: 100%;
+    padding: 1%;
+}
+.logo-cadastro{
+    margin-top: 10%;
+    height: 30%;
+    width: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.login-cadastro-choice-button{
+    border: 1px solid rgba(255, 255, 255, 0.171);
+    width: 10%;
+    height: 3%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    padding: 5%;
+}
+.login-cadastro-choice-button:hover{
+    background-color: rgba(255, 255, 255, 0.473);
+}
+.out-login-cadastro{
+    width: 50%;
+    height: 80%;
+    /*background: radial-gradient(circle at 100% 70%, #3c139c, #05038b);*/
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: -2px 0px 30px rgba(255, 255, 255, 0.226);
+    border-radius: 20px;
+    display: flex;
+    gap: 5%;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: "Questrial";
+    text-align: center;
+    align-self: center;
+}
+.botoes-login-cadastro{
+    width: 40%;
+    height: 100%;
+    align-items:center;
+}
+.login-info{
+    height: 100%;
+    width: 90%;
+    position: relative;
+    align-items: center;
+    align-content: center;
+}
+.info-input-label-descricao{
+    text-align: left;
+    align-content: space-around;
+}
+.label-detalhamento{
+    font-weight: normal;
+}
+.h{
+    font-family: "Questrial";
+    font-size: 20px;
+}
+.p{
+    font-family: "Questrial";
+}
+.cancel-button-text{
+    font-family: "Questrial";
+}
+.modal-login-out{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.199);
+    position: absolute;
+    align-content: center;
+    display: none;
+}
+.modal-login-box{
+    width: 500px;
+    height: 200px;
+    background-color: #67127C;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: white;
+    padding: 3%;
+    background-image: url(svgs/Vector\ 2.svg);
+    background-position: 10% -14%;
+    background-repeat: no-repeat;
+}
+.modal-login-button{
+    border: 1px solid #67127C;
+    width: 20%;
+    height: 5%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    right: 0;
+    text-align: center;
+}
+.modal-login-button:hover{
+    background-color: #67127C;
+    color: white;
+}
+.modal-login-cancel-button{
+    border: 1px solid #67127C;
+    width: 20%;
+    height: 2.5%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    right: 0;
+    text-align: center;
+}
+.login-buttons-area{
+    display: flex;
+    gap: 1%;
+    justify-content: right;
+}
+/*========================= PARTE MELO ================================*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #F8FAF9;
+}
+
+.logo svg {
+    width: 228px;
+    height: 56.48px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #171717;
+    font-size: 24px;
+}
+
+.main-content {
+    display: flex;
+    height: calc(100vh - 96px);
+}
+
+.left-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-side h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #67117C;
+    color: #F8FAF9;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.right-side {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-image {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.img1 {
+    top: 129px;
+    left: 744px;
+    width: 292.1px;
+    height: 275px;
+}
+
+.img2 {
+    top: 397px;
+    left: 1039px;
+    width: 292.1px;
+    height: 275px;
+}
+
+.img3 {
+    top: 512px;
+    left: 586px;
+    width: 292.1px;
+    height: 275px;
+}
+
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    width: 58px;
+    height: 58px;
+    top: 209px;
+    left: 47px;
+    background-color: #AF95EC;
+}
+
+.circle2 {
+    width: 80px;
+    height: 80px;
+    top: 55px;
+    left: 505px;
+    background-color: #71418B;
+}
+
+.circle3 {
+    width: 39px;
+    height: 39px;
+    top: 171px;
+    left: 608px;
+    background-color: #AF95EC;
+}
+
+.circle4 {
+    width: 22px;
+    height: 22px;
+    top: 344px;
+    left: 293px;
+    background-color: #71418B;
+}
+
+.circle5 {
+    width: 39px;
+    height: 39px;
+    top: 503px;
+    left: 170px;
+    background-color: #67117C;
+}
+
+/* Seção de Vagas */
+.jobs-section {
+    padding: 40px 20px;
+    background-color: #F8FAF9;
+    text-align: center;
+}
+
+.jobs-section h2 {
+    font-size: 32px;
+    color: #171717;
+    margin-bottom: 30px;
+}
+
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.job-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h3 {
+    font-size: 24px;
+    color: #171717;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.job-card .details-button {
+    background-color: #71418B;
+    color: #F8FAF9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    max-width: 90%;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    color: #171717;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.modal-content .apply-button {
+    background-color: #71418B;
+    color: #F8FAF9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #71418B;
+}
+
+footer {
+    justify-content: center;
+}
+
+.entrar-button{
+    border: 1px solid #67127C;
+    width: 117px;
+    height: 5%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    font-family: "Questrial";
+    font-size: 21px;
+    margin-left: 7%;
+    margin-top: -3%;
+}
+.entrar-button:hover{
+    background-color: #67127C;
+    color: white;
+}
+.cadastrar-se-button{
+    margin-right: 11px;
+    margin-top: 13px;
+}
+.perfil-button{
+    height: 56px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-image: url(imgs/foto_perfil_vazio.jpg);
+    margin-left: 26px;
+    margin-top: -15px;
+    background-size: 100%;
+}
+
+/* ======================= PARTE DO IAN ======================= */
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 200px; 
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid #af95ec;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+.profile-photo-container {
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-photo {
+    margin-left: 30px;
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd;
+    border: 3px solid #af95ec;
+}
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    color: #67117c;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.info {
+    margin: 10px 0;
+    text-align: left;
+}
+.info label {
+    font-weight: bold;
+    color: #67117c;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Questrial";
+    font-size: 20px;
+}
+.info input{
+    padding-left: 1%;
+    padding-right: 5%;
+    padding-top: 1%;
+    border: 1px solid#67127C;
+    border-radius: 30px;
+    width: 80%;
+    height: 40px;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.801);
+}
+.info p {
+    margin: 0;
+    color: #333;
+}
+
+#edit-photo {
+    display: none;
+}
+.body-perfil{
+    background: white;
+    background-image: url(svgs/Vector\ 2.svg);
+    background-position: 30% -10%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+.label-trocar-imagem{
+    border: 1px solid #67127C;
+    width: 20%;
+    height: 5%;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    align-items: center;
+    justify-content: center;
+    padding-left: 2%;
+    padding-top: 1%;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    font-family: "Questrial";
+}
+.label-trocar-imagem:hover{
+    background-color: #67127C;
+    color: white;
+}
